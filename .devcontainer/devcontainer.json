@@ -1,0 +1,18 @@
+{
+    "name": "Amazon Braket Quantum Development",
+    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.12",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "ms-toolsai.jupyter"
+        ]
+      }
+    },
+    "features": {
+      "ghcr.io/tomharvey/devcontainer-features/aws-sso-util:1": {},
+      "ghcr.io/devcontainers/features/aws-cli:1": {},
+      "ghcr.io/devcontainers-extra/features/poetry:2": {}
+    }
+
+  }
