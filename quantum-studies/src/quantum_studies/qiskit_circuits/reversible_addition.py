@@ -1,5 +1,5 @@
 from qiskit import QuantumCircuit, transpile
-from qiskit_aer import AerSimulator
+from qiskit.providers.aer import AerSimulator
 
 def reversible_2bit_adder():
     # Qubit layout:
@@ -52,6 +52,7 @@ def reversible_2bit_adder():
     return qc
 
 qc = reversible_2bit_adder()
+print(qc.draw())
 simulator = AerSimulator()
 compiled = transpile(qc, simulator)
 result = simulator.run(compiled, shots=1).result()
