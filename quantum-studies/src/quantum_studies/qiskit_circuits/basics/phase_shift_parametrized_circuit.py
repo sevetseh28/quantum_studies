@@ -12,6 +12,6 @@ qc.p(theta[2], 2)  # Apply phase shift to qubit 2
 print(qc.draw())  # Visualize the circuit
 # Note: The circuit is parametrized with three phase shifts, one for each qubit.
 
-b_qc = qc.assign_parameters({theta: [math.pi / 8, math.pi / 4, math.pi /2]})
+b_qc = qc.bind_parameters({theta: [math.pi / 8, math.pi / 4, math.pi /2]})
 
 print(b_qc.draw())  # Visualize the circuit with bound parameters

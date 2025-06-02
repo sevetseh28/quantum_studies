@@ -8,7 +8,7 @@ from braket.aws import AwsDevice
 
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
-    level=logging.INFO, 
+    level=logging.INFO,
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 
@@ -35,7 +35,7 @@ class QuantumExperiment:
             logging.info("Using Real Trapped Ion QPU (AWS Braket provided by IonQ)")
             return AwsDevice("arn:aws:braket:us-east-1::device/qpu/ionq/Aria-1")  # 
         elif self.backend == "aquila":
-            logging.info("Using Real Neutral Atom QPU QPU (AWS Braket provided by QuEra)")
+            logging.info("Using Real Neutral Atom QPPU QPU (AWS Braket provided by QuEra)")
             return AwsDevice("arn:aws:braket:us-east-1::device/qpu/quera/Aquila")  
         else:
             raise ValueError(f"Invalid backend: {self.backend}. Choose 'simulator' or 'qpu'.")

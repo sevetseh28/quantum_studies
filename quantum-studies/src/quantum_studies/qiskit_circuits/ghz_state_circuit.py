@@ -1,5 +1,5 @@
 from qiskit import QuantumCircuit, transpile
-from qiskit_aer import AerSimulator
+from qiskit.providers.aer import AerSimulator
 
 # Create a 3-qubit, 3-classical bit circuit
 qc = QuantumCircuit(3, 3)
