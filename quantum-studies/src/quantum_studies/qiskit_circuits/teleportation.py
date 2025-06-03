@@ -3,6 +3,7 @@
 # Instead, it’s a way to transfer a quantum state from one qubit (Alice’s) to another (Bob’s), using entanglement and classical communication.
 
 
+from matplotlib import pyplot as plt
 from qiskit import QuantumCircuit, Aer, transpile, assemble, execute
 from qiskit.quantum_info import Statevector
 
@@ -23,7 +24,6 @@ qc = QuantumCircuit(qreg, creg)
 # STEP 0: Prepare the state |ψ⟩ on q0 (Alice's state)
 qc.initialize([0.6, 0.8], 0)  # Example Alice state |ψ⟩ = 0.6|0⟩ + 0.8|1⟩
 
-# 
 
 # STEP 1: Entangle q1 and q2 (EPR pair)
 qc.h(1)
