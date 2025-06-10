@@ -7,5 +7,7 @@ qc.x(0)
 qc.x(0)
 qc.s(1)
 qc.barrier([1])
+qc.barrier(1)
+qc.barrier()
 qc.s(1)
 print(qc.draw())  # Visualize the circuit

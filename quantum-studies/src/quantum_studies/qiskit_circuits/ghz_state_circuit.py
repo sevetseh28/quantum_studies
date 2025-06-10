@@ -16,6 +16,8 @@ qc.cx(0, 1)
 # Step 3: CNOT from qubit 0 to qubit 2 - Further entanglement
 qc.cx(0, 2)
 
+# Doing this will also create a GHZ  cx.([0, 1], [1, 2])
+
 # Step 4: Measure all qubits
 qc.measure(0, 0)
 qc.measure(1, 1)
