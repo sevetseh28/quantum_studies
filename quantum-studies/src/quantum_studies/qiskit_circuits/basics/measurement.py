@@ -6,6 +6,12 @@ qc.h([0, 1, 2])  # Apply Hadamard gate to all qubits
 # Measure all qubits specifying classical bits
 qc.measure([0, 1, 2], [0, 1, 2])  # Measure qubits 0, 1, and 2 into classical bits 0, 1, and 2
 
+qc.measure(0, 0)  # Measure qubit 0 into classical bit 0
+qc.measure(1, 1)  # Measure qubit 1 into classical bit 1
+qc.measure(2, 2)  # Measure qubit 2 into classical bit 2
+
+qc.measure([0, 1], [0, 1])
+
 # We can also use measure_all() for convenience
 # qc.measure_all() # Creates a barrier and three classical bits for each qubit ) # This also creates a new classical register with three bits apart from the original classical register
 
