@@ -13,3 +13,7 @@ qc.barrier(-1)
 qc.barrier([-1, -2])
 qc.s(1)
 print(qc.draw())  # Visualize the circuit
+
+qc.decompose()
+print(qc.decompose().draw())  # Visualize the decomposed circuit
+
