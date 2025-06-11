@@ -1,4 +1,4 @@
-from qiskit.quantum_info import average_gate_fidelity, state_fidelity, process_fidelity
+from qiskit.quantum_info import average_gate_fidelity, state_fidelity, process_fidelity, average_gate_fidelity
 from qiskit.quantum_info import Operator
 from qiskit.circuit.library import XGate
 import numpy
