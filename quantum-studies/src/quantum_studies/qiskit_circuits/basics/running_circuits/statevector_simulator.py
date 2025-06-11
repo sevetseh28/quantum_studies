@@ -10,7 +10,7 @@ backend: BasicAer = BasicAer.get_backend('statevector_simulator')
 tqc = transpile(qc, backend)
 job = backend.run(tqc)
 result = job.result()
-statevector = result.get_statevector(tqc, 4) # Get the statevector with 4 decimal places
+statevector = result.get_statevector(tqc, 8) # Get the statevector with 4 decimal places
 print("Statevector:", statevector)
 
 # State vector is one shot - it is not probabilistic like the QASM simulator.
