@@ -1,6 +1,6 @@
 {
     "name": "Qiskit 0.29.1 Quantum Development",
-    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.8",
+    "image": "mcr.microsoft.com/vscode/devcontainers/python:3.12",
     "customizations": {
       "vscode": {
         "extensions": [
