@@ -1,6 +1,6 @@
 
-from qiskit import QuantumCircuit, BasicAer, transpile
-
+from qiskit import QuantumCircuit
+from qiskit_aer import QasmSimulator
 
 qc = QuantumCircuit(2)
 
@@ -8,9 +8,9 @@ qc.h(0)
 qc.cx(0, 1)
 qc.measure_all()
 
-backend: BasicAer = BasicAer.get_backend('qasm_simulator')
-tqc = transpile(qc, backend)
-job = backend.run(tqc, shots=1000)
+qasm_simulator = QasmSimulator()
+
+job = qasm_simulator.run(qc, shots=1024)
 result = job.result()
-counts = result.get_counts(tqc)
+counts = result.get_counts()
 print("Measurement results:", counts)

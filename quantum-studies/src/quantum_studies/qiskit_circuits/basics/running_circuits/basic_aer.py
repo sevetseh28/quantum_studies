@@ -1,4 +1,4 @@
-from qiskit import BasicAer
+from qiskit_aer import Simulator, BasicAer
 
 
 print("Available backends in BasicAer:")

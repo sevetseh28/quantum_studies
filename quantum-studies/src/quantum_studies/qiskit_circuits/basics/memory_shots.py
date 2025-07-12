@@ -1,5 +1,6 @@
-from qiskit import QuantumCircuit, execute
-from qiskit.providers.basicaer import BasicAer, Base
+from qiskit import QuantumCircuit, transpile
+from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
+
 
 qc = QuantumCircuit(2, 2)
 

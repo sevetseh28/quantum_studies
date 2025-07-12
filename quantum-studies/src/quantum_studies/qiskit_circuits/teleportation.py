@@ -41,15 +41,11 @@ qc.h(0)
 qc.measure([0, 1], [0, 1])  # Measure q0 → c0, q1 → c1
 qc.barrier()
 
-
-
-
 # STEP 3: Conditional correction on Bob's qubit q2
 qc.x(2).c_if(creg, 0b10)  # if creg == 2
 qc.x(2).c_if(creg, 0b11)  # if creg == 3
 qc.z(2).c_if(creg, 0b01)  # if creg == 1
 qc.z(2).c_if(creg, 0b11)  # if creg == 3
-
 
 print(qc.draw())
 
