@@ -8,13 +8,14 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 numpy = "^2.3.1"
-qiskit = {extras = ["visualization"], version = "^2.1.0"}
+qiskit = {extras = ["visualization"], version = "<2.0"}
 matplotlib = "^3.10.3"
 ipykernel = "^6.29.5"
 pylatexenc = "^2.10"
 qiskit-aer = "^0.17.1"
 qiskit-ibm-runtime = "^0.40.1"
 jupyter = "^1.1.1"
+qiskit-machine-learning = "^0.8.3"
 
 [build-system]
 requires = ["poetry-core"]
