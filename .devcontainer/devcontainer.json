@@ -13,7 +13,7 @@
     "features": {
       // "ghcr.io/tomharvey/devcontainer-features/aws-sso-util:1": {},
       // "ghcr.io/devcontainers/features/aws-cli:1": {},
-      "ghcr.io/devcontainers-extra/features/poetry:2": {}
+      "ghcr.io/devcontainers-extra/features/poetry:2": {},
+      "ghcr.io/nils-geistmann/devcontainers-features/zsh:0":  {}
     }
-
   }
