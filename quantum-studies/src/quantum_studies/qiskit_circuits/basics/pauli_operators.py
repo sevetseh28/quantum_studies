@@ -15,7 +15,7 @@ print(qc.draw())
 
 
 # Now let's use Pauli other form of initialization - Symplectic form
-z = np.array([1,1,0], dtype=bool)
+z = np.array([0,1,1], dtype=bool)
 x = np.array([1,0,1], dtype=bool)
 # From `(z,x)`:
 	# •	Qubit 0: `z=0, x=1` → X
@@ -24,7 +24,7 @@ x = np.array([1,0,1], dtype=bool)
 phase = 0 # Corresponds to +i
 
 p2 = Pauli((z, x, phase))  # Create a Pauli operator with the specified z, x, and phase
-p2_matrix = p2.to_matrix()  # Convert to matrix representation
+p2_matrix = p2.to_matrix()  # Convert to matrix representation - It is always a dense matrix representation
 label = p2.to_label()
 print("Symplectic form label:", label)
 print("Symplectic form matrix shape:", p2_matrix.shape)
@@ -36,3 +36,7 @@ print("Pauli operator with label initialization", label + ":\n", label_op_matrix
 
 # Check if they're equal
 print("Are symplectic and label matrices equal?", np.allclose(p2_matrix, label_op_matrix))
+
+# Let's use a sparse matrix representation
+p2_sparse = p2.to_matrix(sparse=True)  # Convert to sparse matrix representation
+print("Sparse matrix representation of the Pauli operator:\n", p2_sparse)
